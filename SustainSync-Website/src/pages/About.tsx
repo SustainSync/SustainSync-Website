@@ -14,7 +14,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: 'Youssef El-Shaer',
-    role: 'Project Manager & Developer',
+    role: 'Project Manager & Frontend Developer',
     bio: 'Computer Science Student at KSU and Cloud Engineer at Cox Enterprises with over 3 years of Professional IT/Engineering experince. My role in this project was leading the architecture design, containerization, and frontend development efforts for the SustainSync project.',
     linkedin: 'https://www.linkedin.com/in/youssef-el-shaer/',
     github: 'https://github.com/Chewbacca625',
@@ -22,8 +22,8 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Zaid Khan',
-    role: 'Frontend Developer & UI/UX Designer',
-    bio: 'UI/UX enthusiast dedicated to crafting intuitive user experiences. Focuses on responsive design and accessibility. Believes in the power of great design to drive user engagement and positive change.',
+    role: 'Backend Developer',
+    bio: 'Computer Science Student at KSU with 3 years of professional/project experience at Delta Air Lines and the KSU OWL Robotics team. My role in this project focused on the database, RAG model, and general backend development efforts.',
     linkedin: 'https://www.linkedin.com/in/zaid-khan-cs/',
     github: 'https://github.com/zaidkhan05',
     avatar: '/SustainSync-Website/assets/member2.jpg',
