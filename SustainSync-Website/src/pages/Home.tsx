@@ -101,7 +101,7 @@ const Home = () => {
                     height: '100%',
                     border: 0,
                   }}
-                  src="https://www.youtube.com/embed/YOUR_PRESENTATION_VIDEO_ID"
+                  src="https://www.youtube.com/embed/8UilZJ8wps4"
                   title="SustainSync Presentation"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
