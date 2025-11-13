@@ -13,12 +13,12 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'Team Member 1',
-    role: 'Full Stack Developer',
-    bio: 'Passionate about creating sustainable solutions through technology. Specializes in backend architecture and database design. Committed to building scalable systems that make a positive environmental impact.',
-    linkedin: 'https://www.linkedin.com/in/your-profile',
-    github: 'https://github.com/your-profile',
-    avatar: '/SustainSync-Website/assets/member1.jpg', // Example image path
+    name: 'Youssef El-Shaer',
+    role: 'Project Manager & Developer',
+    bio: 'Computer Science Student at KSU and Cloud Engineer at Cox Enterprises with over 3 years of Professional IT/Engineering experince. My role in this project was leading the architecture design, containerization, and frontend development efforts for the SustainSync project.',
+    linkedin: 'https://www.linkedin.com/in/youssef-el-shaer/',
+    github: 'https://github.com/Chewbacca625',
+    avatar: '/SustainSync-Website/assets/yeheadshot.jpg',
   },
   {
     name: 'Team Member 2',
@@ -70,9 +70,9 @@ const About = () => {
             fontSize: { xs: '0.95rem', sm: '1rem', md: '1.05rem' },
           }}
         >
-          We are a dedicated team of computer science students passionate about leveraging technology 
-          to address environmental challenges. Our diverse skill sets and shared commitment to sustainability 
-          drive us to create innovative solutions that make a real difference.
+          We are a dedicated team of computer science students with a passion to leverage technology and
+          address real world challanges. Our diverse skill sets and shared commitment to sustainability 
+          drove us to create this innovative application that will make a real difference in the sustainability sector.
         </Typography>
       </Box>
 
@@ -98,12 +98,12 @@ const About = () => {
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 3 }}>
                   <Avatar
                     sx={{
-                      width: 120,
-                      height: 120,
+                      width: 160,
+                      height: 160,
                       mb: 2,
                       bgcolor: '#8BC53F',
                       color: '#FFFFFF',
-                      fontSize: '3rem',
+                      fontSize: '4rem',
                       fontWeight: 'bold',
                     }}
                     src={member.avatar}
@@ -190,10 +190,9 @@ const About = () => {
             fontSize: { xs: '0.95rem', sm: '1rem', md: '1.05rem' },
           }}
         >
-          As part of our senior computing project, we aim to demonstrate how modern software engineering 
-          practices can be applied to create meaningful solutions for environmental sustainability. 
-          SustainSync represents our commitment to using our technical skills for positive social and 
-          environmental impact.
+          As part of our senior computing project, we demonstrated how modern AI tools and techologies
+          can be leveraged to fill a gap in the sustainability sector. SustainSync represents a commitment 
+          to using our technical skills for positive social and environmental impact.
         </Typography>
       </Box>
     </Container>

@@ -3,43 +3,69 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 
 const Home = () => {
   return (
-    <Container maxWidth="xl" sx={{ py: { xs: 4, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4 } }}>
-      {/* Hero Section */}
-      <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 8 } }}>
-        <Typography 
-          variant="h2" 
-          component="h1" 
-          gutterBottom 
-          sx={{ 
-            fontWeight: 800,
-            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
-            color: '#2A4B36',
-            letterSpacing: '-0.02em',
+    <Container maxWidth="xl" sx={{ py: { xs: 2, sm: 3, md: 4 }, px: { xs: 2, sm: 3, md: 4 } }}>
+      {/* Hero Section inside container */}
+      <Box
+        sx={{
+          position: 'relative',
+          minHeight: { xs: '30vh', md: '40vh', lg: '45vh' },
+          display: 'flex',
+          alignItems: 'center',
+          backgroundImage: "url('/SustainSync-Website/assets/homepageBG.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          borderRadius: 3,
+          overflow: 'hidden',
+          mb: { xs: 4, md: 6 },
+        }}
+      >
+        {/* Overlay for contrast */}
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            bgcolor: 'rgba(42, 75, 54, 0.35)',
           }}
-        >
-          Welcome to SustainSync
-        </Typography>
-        <Typography 
-          variant="h5" 
-          sx={{ 
-            color: '#5a7460',
-            fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
-            fontWeight: 500,
-            mt: 2,
-          }} 
-          paragraph
-        >
-           A Sustainable Dashboard for a Better Tomorrow
-        </Typography>
+        />
+        <Box sx={{ position: 'relative', zIndex: 1, textAlign: 'center', width: '100%', py: { xs: 6, md: 10 }, px: { xs: 2, sm: 3, md: 4 } }}>
+          <Typography
+            variant="h2"
+            component="h1"
+            gutterBottom
+            sx={{
+              fontWeight: 800,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+              color: '#FFFFFF',
+              letterSpacing: '-0.02em',
+              textShadow: '0 2px 8px rgba(0,0,0,0.25)'
+            }}
+          >
+            Welcome to SustainSync
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: 'rgba(255,255,255,0.95)',
+              fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+              fontWeight: 500,
+              mt: 2,
+              textShadow: '0 1px 6px rgba(0,0,0,0.2)'
+            }}
+            paragraph
+          >
+            A Sustainable Dashboard for a Better Tomorrow!
+          </Typography>
+        </Box>
       </Box>
 
       {/* Videos Section */}
-      <Box sx={{ mb: { xs: 6, md: 8 } }}>
+      <Box sx={{ mb: { xs: 4, md: 6 } }}>
         <Typography 
           variant="h4" 
           gutterBottom 
           sx={{ 
-            mb: 4,
+            mb: 3,
             fontWeight: 700,
             fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
             color: '#2A4B36',
@@ -128,12 +154,12 @@ const Home = () => {
       </Box>
 
       {/* Project Overview Section */}
-      <Box sx={{ mb: { xs: 6, md: 8 } }}>
+      <Box sx={{ mb: { xs: 4, md: 6 } }}>
         <Typography 
           variant="h4" 
           gutterBottom 
           sx={{ 
-            mb: 3,
+            mb: 2,
             fontWeight: 700,
             fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
             color: '#2A4B36',
@@ -167,13 +193,13 @@ const Home = () => {
           variant="h4" 
           gutterBottom 
           sx={{ 
-            mb: 3,
+            mb: 2,
             fontWeight: 700,
             fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
             color: '#2A4B36',
           }}
         >
-          Technology Stack
+          Technology Stack & Methodologies
         </Typography>
         <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 6, lg: 3 }}>
@@ -184,9 +210,8 @@ const Home = () => {
                 </Typography>
                 <Stack direction="row" flexWrap="wrap" gap={1}>
                   <Chip label="React" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="TypeScript" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Canva" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
                   <Chip label="Material-UI" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="Vite" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
                 </Stack>
               </CardContent>
             </Card>
@@ -198,9 +223,9 @@ const Home = () => {
                   Backend
                 </Typography>
                 <Stack direction="row" flexWrap="wrap" gap={1}>
-                  <Chip label="Node.js" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="Express" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="MongoDB" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Django" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="PostgreSQL" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Ollama" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
                   <Chip label="REST API" sx={{ bgcolor: '#9FBF84', color: '#2A4B36', fontWeight: 600 }} />
                 </Stack>
               </CardContent>
@@ -214,9 +239,9 @@ const Home = () => {
                 </Typography>
                 <Stack direction="row" flexWrap="wrap" gap={1}>
                   <Chip label="Git/GitHub" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
-                  <Chip label="GitHub Pages" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
-                  <Chip label="ESLint" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
-                  <Chip label="CI/CD" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
+                  <Chip label="GitHub Copilot" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
+                  <Chip label="Github Actions" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
+                  <Chip label="Docker" sx={{ bgcolor: '#8BC53F', color: '#FFFFFF', fontWeight: 600 }} />
                 </Stack>
               </CardContent>
             </Card>
@@ -225,13 +250,13 @@ const Home = () => {
             <Card elevation={2} sx={{ height: '100%', borderRadius: 3, border: '1px solid #CDE3B8' }}>
               <CardContent>
                 <Typography variant="h6" gutterBottom fontWeight="bold" sx={{ color: '#2A4B36' }}>
-                  Additional Technologies
+                  Methodologies
                 </Typography>
                 <Stack direction="row" flexWrap="wrap" gap={1}>
-                  <Chip label="Docker" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="AWS" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="JWT Auth" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
-                  <Chip label="WebSockets" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Agile" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Scrum" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Microservice" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Chip label="Retreival Augmented Generation" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
                 </Stack>
               </CardContent>
             </Card>

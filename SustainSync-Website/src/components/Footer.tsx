@@ -16,25 +16,6 @@ const Footer = () => {
     >
       <Container maxWidth="lg">
         <Stack spacing={3}>
-          {/* Logo and Title */}
-          <Box sx={{ textAlign: 'center' }}>
-            <Box
-              component="img"
-              src="/SustainSync-Website/brand-logo.svg"
-              alt="SustainSync Logo"
-              sx={{
-                height: 50,
-                mb: 1,
-              }}
-            />
-            <Typography variant="h6" fontWeight="bold" sx={{ color: '#FFFFFF' }}>
-              SustainSync
-            </Typography>
-            <Typography variant="body2" sx={{ mt: 1, color: '#E0E0E0' }}>
-              Building a sustainable future through technology
-            </Typography>
-          </Box>
-
           <Divider sx={{ bgcolor: 'rgba(255, 255, 255, 0.2)' }} />
 
           {/* Links */}
@@ -67,7 +48,7 @@ const Footer = () => {
           {/* Copyright */}
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="body2" sx={{ color: '#E0E0E0' }}>
-              © {currentYear} SustainSync. Senior Computing Project.
+              © {currentYear} SustainSync. Kennesaw State University College of Computing and Software Engineering. Course CS4850.
             </Typography>
             <Typography
               variant="body2"

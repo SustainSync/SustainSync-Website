@@ -76,7 +76,7 @@ const Navbar = () => {
             </Button>
             <IconButton
               component="a"
-              href="https://github.com/SustainSync"
+              href="https://github.com/SustainSync/cs4850/tree/main/SustainSync"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub repository"
