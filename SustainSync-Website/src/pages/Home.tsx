@@ -29,7 +29,7 @@ const Home = () => {
           }} 
           paragraph
         >
-          Sustainable Solutions for a Better Tomorrow
+           A Sustainable Dashboard for a Better Tomorrow
         </Typography>
       </Box>
 
