@@ -1,5 +1,36 @@
 import { Box, Container, Typography, Paper, Grid, Card, CardContent, Chip, Stack } from '@mui/material';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import InsightsOutlinedIcon from '@mui/icons-material/InsightsOutlined';
+import HubOutlinedIcon from '@mui/icons-material/HubOutlined';
+import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
+
+const overviewHighlights = [
+  {
+    title: 'Standardized Data Ingestion',
+    description: 'Easily upload and edit CSV utility data. Sustain Sync validates, cleans, and normalizes your records into a consistent format for accurate analysis.',
+    icon: DashboardOutlinedIcon,
+    iconBg: '#EAF7E3',
+  },
+  {
+    title: 'Machine-Learning Forecasting',
+    description: 'Predict future electricity, gas, and water usage with a Prophet model. Visual forecasts help organizations plan ahead with confidence.',
+    icon: AutoGraphOutlinedIcon,
+    iconBg: '#E8F2FF',
+  },
+  {
+    title: 'Goal Tracking & Progress Monitoring',
+    description: 'Set measurable sustainability goals and track real progress using historical data, forecasts, and performance indicators—all in one place.',
+    icon: HubOutlinedIcon,
+    iconBg: '#F3EFFF',
+  },
+  {
+    title: 'AI-Powered Co-Benefit Analysis',
+    description: 'Our RAG-based AI engine identifies correlations, trade-offs, and opportunities across sustainability domains, delivering actionable recommendations.',
+    icon: InsightsOutlinedIcon,
+    iconBg: '#FFF4E8',
+  },
+];
 
 const Home = () => {
   return (
@@ -8,7 +39,7 @@ const Home = () => {
       <Box
         sx={{
           position: 'relative',
-          minHeight: { xs: '30vh', md: '40vh', lg: '45vh' },
+          minHeight: { xs: '24vh', md: '32vh', lg: '36vh' },
           display: 'flex',
           alignItems: 'center',
           backgroundImage: "url('/SustainSync-Website/assets/homepageBG.jpg')",
@@ -167,24 +198,90 @@ const Home = () => {
         >
           Project Overview
         </Typography>
-        <Paper elevation={2} sx={{ p: { xs: 3, sm: 4 }, borderRadius: 3, bgcolor: '#f8faf7', border: '1px solid #CDE3B8' }}>
-          <Typography variant="body1" paragraph sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.8, color: '#2A4B36' }}>
-            SustainSync is an innovative sustainability management platform designed to help organizations 
-            track, analyze, and optimize their environmental impact. Our solution empowers businesses to 
-            make data-driven decisions that promote sustainable practices while maintaining operational efficiency.
-          </Typography>
-          <Typography variant="body1" paragraph sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.8, color: '#2A4B36' }}>
-            Through real-time monitoring, intelligent analytics, and actionable insights, SustainSync bridges 
-            the gap between corporate sustainability goals and practical implementation. The platform integrates 
-            seamlessly with existing workflows, making it easier than ever for organizations to embrace 
-            eco-friendly practices and contribute to a greener future.
-          </Typography>
-          <Typography variant="body1" sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.8, color: '#2A4B36' }}>
-            As a senior computing project, SustainSync demonstrates the power of modern technology in addressing 
-            critical environmental challenges. By combining cutting-edge software engineering with sustainability 
-            science, we've created a tool that not only meets today's needs but also scales for tomorrow's challenges.
-          </Typography>
-        </Paper>
+        <Grid container spacing={3}>
+          <Grid size={{ xs: 12 }}>
+            <Paper
+              elevation={0}
+              sx={{
+                p: { xs: 3, sm: 4 },
+                borderRadius: 3,
+                border: '1px solid #CDE3B8',
+                background: 'linear-gradient(135deg, #f8faf7 0%, #f1f8ef 100%)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 2,
+              }}
+            >
+              <Typography variant="subtitle1" sx={{ color: '#5a7460', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 1 }}>
+                Built Around Two Guiding Questions
+              </Typography>
+              <Stack spacing={2}>
+                <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+                  <Chip label="Q1" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Typography variant="body1" sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.7, color: '#2A4B36' }}>
+                    How can organizations standardize the way they track sustainability goals?
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
+                  <Chip label="Q2" sx={{ bgcolor: '#CDE3B8', color: '#2A4B36', fontWeight: 600 }} />
+                  <Typography variant="body1" sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.7, color: '#2A4B36' }}>
+                    How can AI turn their data into forecasts, insights, and actionable recommendations?
+                  </Typography>
+                </Box>
+              </Stack>
+              <Typography variant="body1" sx={{ fontSize: { xs: '1rem', md: '1.1rem' }, lineHeight: 1.8, color: '#2A4B36' }}>
+                SustainSync unifies data ingestion, forecasting, goal tracking, and AI-driven co-benefit analysis into one intuitive dashboard—helping teams understand impact and act on it with confidence.
+              </Typography>
+            </Paper>
+          </Grid>
+          {overviewHighlights.map((highlight) => {
+            const IconComponent = highlight.icon;
+            return (
+              <Grid key={highlight.title} size={{ xs: 12, md: 6 }}>
+                <Paper
+                  elevation={3}
+                  sx={{
+                    height: '100%',
+                    borderRadius: 3,
+                    p: { xs: 3, sm: 4 },
+                    border: '1px solid #E2F1D7',
+                    bgcolor: '#ffffff',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 2.5,
+                    transition: 'transform 180ms ease, box-shadow 180ms ease',
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 16px 32px rgba(42, 75, 54, 0.1)',
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: '50%',
+                      bgcolor: highlight.iconBg,
+                      color: '#2A4B36',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: '0 8px 18px rgba(42, 75, 54, 0.12)',
+                    }}
+                  >
+                    <IconComponent fontSize="medium" />
+                  </Box>
+                  <Typography variant="h6" sx={{ color: '#2A4B36', fontWeight: 700 }}>
+                    {highlight.title}
+                  </Typography>
+                  <Typography variant="body1" sx={{ color: '#4c6254', lineHeight: 1.7 }}>
+                    {highlight.description}
+                  </Typography>
+                </Paper>
+              </Grid>
+            );
+          })}
+        </Grid>
       </Box>
 
       {/* Technology Stack Section */}
