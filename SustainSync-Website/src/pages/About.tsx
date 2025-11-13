@@ -21,11 +21,11 @@ const teamMembers: TeamMember[] = [
     avatar: '/SustainSync-Website/assets/yeheadshot.jpg',
   },
   {
-    name: 'Team Member 2',
+    name: 'Zaid Khan',
     role: 'Frontend Developer & UI/UX Designer',
     bio: 'UI/UX enthusiast dedicated to crafting intuitive user experiences. Focuses on responsive design and accessibility. Believes in the power of great design to drive user engagement and positive change.',
-    linkedin: 'https://www.linkedin.com/in/your-profile',
-    github: 'https://github.com/your-profile',
+    linkedin: 'https://www.linkedin.com/in/zaid-khan-cs/',
+    github: 'https://github.com/zaidkhan05',
     avatar: '/SustainSync-Website/assets/member2.jpg',
   },
 ];
