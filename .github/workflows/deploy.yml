@@ -27,17 +27,20 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: 'SustainSync-Website/package-lock.json'
       
       - name: Install dependencies
         run: npm ci
+        working-directory: ./SustainSync-Website
       
       - name: Build
         run: npm run build
+        working-directory: ./SustainSync-Website
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./SustainSync-Website/dist
 
   deploy:
     environment:
