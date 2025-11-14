@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 interface TeamMember {
   name: string;
   role: string;
+  graduation: string;
   bio: string;
   linkedin?: string;
   github?: string;
@@ -15,7 +16,8 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Youssef El-Shaer',
     role: 'Project Manager & Frontend Developer',
-    bio: 'Computer Science Student at KSU and Cloud Engineer at Cox Enterprises with over 3 years of Professional IT/Engineering experince. My role in this project was leading the architecture design, containerization, and frontend development efforts for the SustainSync project.',
+    graduation: 'Graduating Fall 2025',
+    bio: 'Senior Computer Science Student at KSU and Cloud Engineer at Cox Enterprises with over 3 years of Professional IT/Engineering experince at various companies including PWC, Infosys, & GTRI. My role in this project was leading the architecture design, containerization, and frontend development efforts for the SustainSync project.',
     linkedin: 'https://www.linkedin.com/in/youssef-el-shaer/',
     github: 'https://github.com/Chewbacca625',
     avatar: '/SustainSync-Website/assets/yeheadshot.jpg',
@@ -23,7 +25,8 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Zaid Khan',
     role: 'Backend Developer',
-    bio: 'Computer Science Student at KSU with 3 years of professional/project experience at Delta Air Lines and the KSU OWL Robotics team. My role in this project focused on the database, RAG model, and general backend development efforts.',
+    graduation: 'Graduating Fall 2025',
+    bio: 'Senior Computer Science Student at KSU with 3 years of professional/project experience at Delta Air Lines and the KSU OWL Robotics team. My role in this project focused on the database, RAG model, and general backend development efforts.',
     linkedin: 'https://www.linkedin.com/in/zaid-khan-cs/',
     github: 'https://github.com/zaidkhan05',
     avatar: '/SustainSync-Website/assets/member2.jpg',
@@ -115,6 +118,9 @@ const About = () => {
                   </Typography>
                   <Typography variant="subtitle1" fontWeight="medium" gutterBottom sx={{ color: '#8BC53F' }}>
                     {member.role}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#5a7460', fontStyle: 'italic' }}>
+                    {member.graduation}
                   </Typography>
                 </Box>
 
