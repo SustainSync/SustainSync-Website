@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
     bio: 'Senior Computer Science Student at KSU with 3 years of professional/project experience at Delta Air Lines and the KSU OWL Robotics team. My role in this project focused on the database, RAG model, and general backend development efforts.',
     linkedin: 'https://www.linkedin.com/in/zaid-khan-cs/',
     github: 'https://github.com/zaidkhan05',
-    avatar: '/SustainSync-Website/assets/member2.jpg',
+    avatar: '/SustainSync-Website/assets/zkheadshot.jpg',
   },
 ];
 
