@@ -170,7 +170,7 @@ const Home = () => {
                     height: '100%',
                     border: 0,
                   }}
-                  src="https://www.youtube.com/embed/YOUR_DEMO_VIDEO_ID"
+                  src="https://www.youtube.com/embed/yWf9mvjGHXA"
                   title="SustainSync Demo"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

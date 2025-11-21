@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SustainSync - Redirecting...</title>
+  <script>
+    // GitHub Pages SPA redirect hack
+    // This script takes the current URL and redirects to index.html with the path as a query parameter
+    const pathSegmentsToKeep = 1; // Change this if your site is not hosted at the root
+    
+    const path = window.location.pathname.slice(1);
+    const segments = path.split('/').slice(pathSegmentsToKeep);
+    
+    let redirect = '/' + window.location.pathname.split('/').slice(0, pathSegmentsToKeep + 1).join('/');
+    if (segments.length > 0) {
+      redirect += '?p=/' + segments.join('/');
+    }
+    redirect += window.location.search.slice(1) ? '&' + window.location.search.slice(1) : '';
+    redirect += window.location.hash;
+    
+    window.location.replace(redirect);
+  </script>
+</head>
+<body>
+</body>
+</html>
