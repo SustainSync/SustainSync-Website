@@ -1,36 +1,63 @@
 import { Box, Container, Typography, Button, Card, CardContent, Stack } from '@mui/material';
-import DescriptionIcon from '@mui/icons-material/Description';
-import DownloadIcon from '@mui/icons-material/Download';
+import ArticleIcon from '@mui/icons-material/Article';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import HubIcon from '@mui/icons-material/Hub';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import StarIcon from '@mui/icons-material/Star';
 
 const FinalReport = () => {
   const pdfPath = '/SustainSync-Website/assets/INDY-2-SustainSync-FinalReport.pdf';
 
+  const reportHighlights = [
+    {
+      title: 'Project Overview',
+      description: 'Introduction to SustainSync, its mission, and the problems we aimed to solve.',
+      icon: RocketLaunchIcon,
+      iconBg: '#EAF7E3',
+    },
+    {
+      title: 'Technical Architecture',
+      description: 'Deep dive into our tech stack, system design, and implementation decisions.',
+      icon: HubIcon,
+      iconBg: '#E8F2FF',
+    },
+    {
+      title: 'Challenges & Lessons Learned',
+      description: 'Key obstacles and what they taught us about real-world software engineering.',
+      icon: TipsAndUpdatesIcon,
+      iconBg: '#FFF4E8',
+    },
+  ];
+
   return (
-    <Container maxWidth="xl" sx={{ py: { xs: 4, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4 } }}>
+    <Container maxWidth="xl" sx={{ py: { xs: 3, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 4 } }}>
       {/* Header Section */}
-      <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 8 } }}>
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-          <DescriptionIcon sx={{ fontSize: 48, color: '#8BC53F' }} />
-        </Box>
+      <Box sx={{ textAlign: 'center', mb: { xs: 4, md: 8 } }}>
         <Typography 
           variant="h2" 
           component="h1" 
           gutterBottom 
           sx={{ 
             fontWeight: 800,
-            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+            fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
             color: '#2A4B36',
             letterSpacing: '-0.02em',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: { xs: 1, md: 1.5 },
           }}
         >
+          <ArticleIcon sx={{ fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, color: '#8BC53F' }} />
           Final Report
         </Typography>
         <Typography 
           variant="h5" 
           sx={{ 
             color: '#5a7460',
-            fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+            fontSize: { xs: '1rem', sm: '1.3rem', md: '1.5rem' },
             fontWeight: 500,
             mt: 2,
           }} 
@@ -45,7 +72,8 @@ const FinalReport = () => {
             mx: 'auto', 
             mt: 3, 
             color: '#2A4B36',
-            fontSize: { xs: '0.95rem', sm: '1rem', md: '1.05rem' },
+            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.05rem' },
+            px: { xs: 1, sm: 0 },
           }}
         >
           Our comprehensive final report details the development journey, technical architecture, 
@@ -54,20 +82,20 @@ const FinalReport = () => {
       </Box>
 
       {/* Action Buttons */}
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 6, flexWrap: 'wrap' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', gap: { xs: 1.5, sm: 2 }, mb: { xs: 4, md: 6 }, flexWrap: 'wrap', px: 1 }}>
         <Button
           variant="contained"
           size="large"
-          startIcon={<DownloadIcon />}
+          startIcon={<CloudDownloadIcon />}
           component="a"
           href={pdfPath}
           download="SustainSync-Final-Report.pdf"
           sx={{
             bgcolor: '#8BC53F',
             color: '#FFFFFF',
-            px: 4,
-            py: 1.5,
-            fontSize: '1.1rem',
+            px: { xs: 2.5, sm: 4 },
+            py: { xs: 1.2, sm: 1.5 },
+            fontSize: { xs: '0.9rem', sm: '1.1rem' },
             '&:hover': {
               bgcolor: '#6a9a2f',
             },
@@ -86,9 +114,9 @@ const FinalReport = () => {
           sx={{
             borderColor: '#2A4B36',
             color: '#2A4B36',
-            px: 4,
-            py: 1.5,
-            fontSize: '1.1rem',
+            px: { xs: 2.5, sm: 4 },
+            py: { xs: 1.2, sm: 1.5 },
+            fontSize: { xs: '0.9rem', sm: '1.1rem' },
             '&:hover': {
               borderColor: '#8BC53F',
               bgcolor: 'rgba(139, 197, 63, 0.1)',
@@ -113,7 +141,7 @@ const FinalReport = () => {
         <Box
           sx={{
             width: '100%',
-            height: { xs: '60vh', sm: '70vh', md: '80vh' },
+            height: { xs: '50vh', sm: '65vh', md: '80vh' },
             bgcolor: '#f8faf7',
           }}
         >
@@ -128,38 +156,29 @@ const FinalReport = () => {
       </Card>
 
       {/* Report Summary Section */}
-      <Box sx={{ mt: { xs: 6, md: 8 } }}>
+      <Box sx={{ mt: { xs: 5, md: 8 } }}>
         <Typography 
           variant="h4" 
-          gutterBottom 
           sx={{ 
-            mb: 4,
+            mb: { xs: 3, md: 4 },
             fontWeight: 700,
-            textAlign: 'center',
             color: '#2A4B36',
+            fontSize: { xs: '1.5rem', sm: '2rem', md: '2.125rem' },
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 1,
           }}
         >
+          <StarIcon sx={{ fontSize: { xs: 24, md: 28 }, color: '#8BC53F' }} />
           Report Highlights
         </Typography>
         <Stack 
           direction={{ xs: 'column', md: 'row' }} 
-          spacing={3} 
+          spacing={{ xs: 2, md: 3 }}
           justifyContent="center"
         >
-          {[
-            {
-              title: 'Project Overview',
-              description: 'Introduction to SustainSync, its mission, and the problems we aimed to solve.',
-            },
-            {
-              title: 'Technical Architecture',
-              description: 'Deep dive into our tech stack, system design, and implementation decisions.',
-            },
-            {
-              title: 'Challenges & Lessons Learned',
-              description: 'Key obstacles and what they taught us about real-world software engineering.',
-            },
-          ].map((item, index) => (
+          {reportHighlights.map((item, index) => (
             <Card 
               key={index}
               elevation={2}
@@ -175,15 +194,30 @@ const FinalReport = () => {
                 }
               }}
             >
-              <CardContent sx={{ p: 3, textAlign: 'center' }}>
+              <CardContent sx={{ p: { xs: 2.5, sm: 3 }, textAlign: 'center' }}>
+                <Box
+                  sx={{
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
+                    bgcolor: item.iconBg,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    mx: 'auto',
+                    mb: 2,
+                  }}
+                >
+                  <item.icon sx={{ fontSize: 28, color: '#2A4B36' }} />
+                </Box>
                 <Typography 
                   variant="h6" 
                   gutterBottom 
-                  sx={{ fontWeight: 600, color: '#2A4B36' }}
+                  sx={{ fontWeight: 600, color: '#2A4B36', fontSize: { xs: '1rem', sm: '1.25rem' } }}
                 >
                   {item.title}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#5a7460' }}>
+                <Typography variant="body2" sx={{ color: '#5a7460', fontSize: { xs: '0.85rem', sm: '0.875rem' } }}>
                   {item.description}
                 </Typography>
               </CardContent>
