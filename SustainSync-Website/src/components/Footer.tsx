@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Copyright */}
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="body2" sx={{ color: '#E0E0E0' }}>
-              © {currentYear} SustainSync. Kennesaw State University College of Computing and Software Engineering. Course CS4850.
+              © {currentYear} SustainSync. Kennesaw State University College of Computing and Software Engineering. Indy-2 CS4850 Fall Semester 2025.
             </Typography>
             <Typography
               variant="body2"

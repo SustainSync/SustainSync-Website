@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import CDay from './pages/CDay';
+import FinalReport from './pages/FinalReport';
 
 // Create a custom theme for SustainSync with brand colors
 const theme = createTheme({
@@ -134,6 +136,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/cday" element={<CDay />} />
+              <Route path="/final-report" element={<FinalReport />} />
             </Routes>
           </Box>
           <Footer />

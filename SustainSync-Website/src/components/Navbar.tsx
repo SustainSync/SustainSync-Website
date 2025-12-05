@@ -74,6 +74,44 @@ const Navbar = () => {
             >
               About
             </Button>
+            <Button
+              component={Link}
+              to="/cday"
+              sx={{
+                color: '#FFFFFF',
+                fontSize: { xs: '0.9rem', sm: '1rem' },
+                fontWeight: location.pathname === '/cday' ? 'bold' : 'normal',
+                borderBottom: location.pathname === '/cday' ? 2 : 0,
+                borderRadius: 0,
+                borderColor: '#8BC53F',
+                px: { xs: 1.5, sm: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(139, 197, 63, 0.1)',
+                  color: '#8BC53F',
+                },
+              }}
+            >
+              C-Day
+            </Button>
+            <Button
+              component={Link}
+              to="/final-report"
+              sx={{
+                color: '#FFFFFF',
+                fontSize: { xs: '0.9rem', sm: '1rem' },
+                fontWeight: location.pathname === '/final-report' ? 'bold' : 'normal',
+                borderBottom: location.pathname === '/final-report' ? 2 : 0,
+                borderRadius: 0,
+                borderColor: '#8BC53F',
+                px: { xs: 1.5, sm: 2 },
+                '&:hover': {
+                  backgroundColor: 'rgba(139, 197, 63, 0.1)',
+                  color: '#8BC53F',
+                },
+              }}
+            >
+              Final Report
+            </Button>
             <IconButton
               component="a"
               href="https://github.com/SustainSync/cs4850/tree/main/SustainSync"
